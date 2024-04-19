@@ -53,17 +53,20 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnEnviar = new System.Windows.Forms.Button();
+            this.picBox = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gbMenu.SuspendLayout();
             this.bgMenu2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // gbMenu
             // 
-            this.gbMenu.BackColor = System.Drawing.Color.Teal;
+            this.gbMenu.BackColor = System.Drawing.Color.IndianRed;
+            this.gbMenu.Controls.Add(this.pictureBox1);
             this.gbMenu.Controls.Add(this.label1);
             this.gbMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.gbMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -92,7 +95,7 @@
             // 
             this.bgMenu2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.bgMenu2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(3)))), ((int)(((byte)(3)))));
+            this.bgMenu2.BackColor = System.Drawing.Color.DarkSalmon;
             this.bgMenu2.Controls.Add(this.btnDelete);
             this.bgMenu2.Controls.Add(this.btnCancel);
             this.bgMenu2.Controls.Add(this.btnEnviar);
@@ -122,7 +125,7 @@
             // flowLayoutPanel4
             // 
             this.flowLayoutPanel4.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanel4.Location = new System.Drawing.Point(50, 405);
+            this.flowLayoutPanel4.Location = new System.Drawing.Point(57, 369);
             this.flowLayoutPanel4.Name = "flowLayoutPanel4";
             this.flowLayoutPanel4.Size = new System.Drawing.Size(240, 2);
             this.flowLayoutPanel4.TabIndex = 12;
@@ -130,7 +133,7 @@
             // flowLayoutPanel3
             // 
             this.flowLayoutPanel3.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(182, 353);
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(189, 317);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
             this.flowLayoutPanel3.Size = new System.Drawing.Size(109, 2);
             this.flowLayoutPanel3.TabIndex = 11;
@@ -138,7 +141,7 @@
             // flowLayoutPanel2
             // 
             this.flowLayoutPanel2.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(50, 353);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(57, 317);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(109, 2);
             this.flowLayoutPanel2.TabIndex = 10;
@@ -146,7 +149,7 @@
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(50, 295);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(57, 259);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(109, 2);
             this.flowLayoutPanel1.TabIndex = 9;
@@ -155,7 +158,7 @@
             // 
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Cascadia Code", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(25, 369);
+            this.lblEmail.Location = new System.Drawing.Point(32, 333);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(56, 18);
             this.lblEmail.TabIndex = 8;
@@ -163,21 +166,21 @@
             // 
             // txtBoxEmail
             // 
-            this.txtBoxEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(3)))), ((int)(((byte)(3)))));
+            this.txtBoxEmail.BackColor = System.Drawing.Color.DarkSalmon;
             this.txtBoxEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBoxEmail.Font = new System.Drawing.Font("Cascadia Code", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxEmail.ForeColor = System.Drawing.Color.White;
-            this.txtBoxEmail.Location = new System.Drawing.Point(49, 387);
+            this.txtBoxEmail.Location = new System.Drawing.Point(56, 351);
             this.txtBoxEmail.Multiline = true;
             this.txtBoxEmail.Name = "txtBoxEmail";
             this.txtBoxEmail.Size = new System.Drawing.Size(242, 20);
-            this.txtBoxEmail.TabIndex = 7;
+            this.txtBoxEmail.TabIndex = 4;
             // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Cascadia Code", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(25, 317);
+            this.lblNombre.Location = new System.Drawing.Point(32, 281);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(64, 18);
             this.lblNombre.TabIndex = 6;
@@ -185,21 +188,21 @@
             // 
             // txtBoxNombre
             // 
-            this.txtBoxNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(3)))), ((int)(((byte)(3)))));
+            this.txtBoxNombre.BackColor = System.Drawing.Color.DarkSalmon;
             this.txtBoxNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBoxNombre.Font = new System.Drawing.Font("Cascadia Code", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxNombre.ForeColor = System.Drawing.Color.White;
-            this.txtBoxNombre.Location = new System.Drawing.Point(50, 335);
+            this.txtBoxNombre.Location = new System.Drawing.Point(57, 299);
             this.txtBoxNombre.Multiline = true;
             this.txtBoxNombre.Name = "txtBoxNombre";
             this.txtBoxNombre.Size = new System.Drawing.Size(110, 20);
-            this.txtBoxNombre.TabIndex = 5;
+            this.txtBoxNombre.TabIndex = 2;
             // 
             // lblApellido
             // 
             this.lblApellido.AutoSize = true;
             this.lblApellido.Font = new System.Drawing.Font("Cascadia Code", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblApellido.Location = new System.Drawing.Point(163, 317);
+            this.lblApellido.Location = new System.Drawing.Point(170, 281);
             this.lblApellido.Name = "lblApellido";
             this.lblApellido.Size = new System.Drawing.Size(80, 18);
             this.lblApellido.TabIndex = 4;
@@ -207,11 +210,11 @@
             // 
             // txtBoxApellido
             // 
-            this.txtBoxApellido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(3)))), ((int)(((byte)(3)))));
+            this.txtBoxApellido.BackColor = System.Drawing.Color.DarkSalmon;
             this.txtBoxApellido.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBoxApellido.Font = new System.Drawing.Font("Cascadia Code", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxApellido.ForeColor = System.Drawing.Color.White;
-            this.txtBoxApellido.Location = new System.Drawing.Point(181, 335);
+            this.txtBoxApellido.Location = new System.Drawing.Point(188, 299);
             this.txtBoxApellido.Multiline = true;
             this.txtBoxApellido.Name = "txtBoxApellido";
             this.txtBoxApellido.Size = new System.Drawing.Size(110, 20);
@@ -221,7 +224,7 @@
             // 
             this.lblNid.AutoSize = true;
             this.lblNid.Font = new System.Drawing.Font("Cascadia Code", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNid.Location = new System.Drawing.Point(25, 259);
+            this.lblNid.Location = new System.Drawing.Point(32, 223);
             this.lblNid.Name = "lblNid";
             this.lblNid.Size = new System.Drawing.Size(32, 18);
             this.lblNid.TabIndex = 2;
@@ -229,11 +232,11 @@
             // 
             // txtBoxNid
             // 
-            this.txtBoxNid.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(3)))), ((int)(((byte)(3)))));
+            this.txtBoxNid.BackColor = System.Drawing.Color.DarkSalmon;
             this.txtBoxNid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBoxNid.Font = new System.Drawing.Font("Cascadia Code", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxNid.ForeColor = System.Drawing.Color.White;
-            this.txtBoxNid.Location = new System.Drawing.Point(49, 277);
+            this.txtBoxNid.Location = new System.Drawing.Point(56, 241);
             this.txtBoxNid.Multiline = true;
             this.txtBoxNid.Name = "txtBoxNid";
             this.txtBoxNid.Size = new System.Drawing.Size(110, 20);
@@ -241,11 +244,11 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.pictureBox1);
+            this.groupBox3.Controls.Add(this.picBox);
             this.groupBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox3.Location = new System.Drawing.Point(28, 52);
+            this.groupBox3.Location = new System.Drawing.Point(63, 76);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(254, 172);
+            this.groupBox3.Size = new System.Drawing.Size(180, 100);
             this.groupBox3.TabIndex = 0;
             this.groupBox3.TabStop = false;
             // 
@@ -254,7 +257,7 @@
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.BackColor = System.Drawing.Color.CadetBlue;
+            this.groupBox1.BackColor = System.Drawing.Color.LightCoral;
             this.groupBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox1.ForeColor = System.Drawing.Color.White;
@@ -292,7 +295,7 @@
             // 
             // txtBuscar
             // 
-            this.txtBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(3)))), ((int)(((byte)(3)))));
+            this.txtBuscar.BackColor = System.Drawing.Color.IndianRed;
             this.txtBuscar.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBuscar.Font = new System.Drawing.Font("Cascadia Code", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBuscar.ForeColor = System.Drawing.Color.White;
@@ -300,7 +303,7 @@
             this.txtBuscar.Multiline = true;
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(314, 23);
-            this.txtBuscar.TabIndex = 1;
+            this.txtBuscar.TabIndex = 8;
             // 
             // label2
             // 
@@ -320,14 +323,14 @@
             this.btnDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDelete.FlatAppearance.BorderSize = 0;
-            this.btnDelete.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
-            this.btnDelete.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(8)))), ((int)(((byte)(8)))));
+            this.btnDelete.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnDelete.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.Font = new System.Drawing.Font("Cascadia Code", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Location = new System.Drawing.Point(166, 433);
+            this.btnDelete.Location = new System.Drawing.Point(173, 425);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(35, 35);
-            this.btnDelete.TabIndex = 15;
+            this.btnDelete.TabIndex = 5;
             this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
@@ -338,14 +341,14 @@
             this.btnCancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancel.FlatAppearance.BorderSize = 0;
-            this.btnCancel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
-            this.btnCancel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(8)))), ((int)(((byte)(8)))));
+            this.btnCancel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnCancel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("Cascadia Code", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(211, 433);
+            this.btnCancel.Location = new System.Drawing.Point(218, 425);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(35, 35);
-            this.btnCancel.TabIndex = 14;
+            this.btnCancel.TabIndex = 6;
             this.btnCancel.UseVisualStyleBackColor = false;
             // 
             // btnEnviar
@@ -355,30 +358,43 @@
             this.btnEnviar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnEnviar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEnviar.FlatAppearance.BorderSize = 0;
-            this.btnEnviar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
-            this.btnEnviar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(8)))), ((int)(((byte)(8)))));
+            this.btnEnviar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnEnviar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnEnviar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEnviar.Font = new System.Drawing.Font("Cascadia Code", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEnviar.Location = new System.Drawing.Point(252, 433);
+            this.btnEnviar.Location = new System.Drawing.Point(259, 425);
             this.btnEnviar.Name = "btnEnviar";
             this.btnEnviar.Size = new System.Drawing.Size(35, 35);
-            this.btnEnviar.TabIndex = 13;
+            this.btnEnviar.TabIndex = 7;
             this.btnEnviar.UseVisualStyleBackColor = false;
+            // 
+            // picBox
+            // 
+            this.picBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picBox.Image = global::Estudiantes.Properties.Resources.image;
+            this.picBox.Location = new System.Drawing.Point(63, 31);
+            this.picBox.Name = "picBox";
+            this.picBox.Size = new System.Drawing.Size(48, 48);
+            this.picBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.picBox.TabIndex = 0;
+            this.picBox.TabStop = false;
+            this.picBox.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(73, 37);
+            this.pictureBox1.Image = global::Estudiantes.Properties.Resources.user;
+            this.pictureBox1.Location = new System.Drawing.Point(38, 22);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
+            this.BackColor = System.Drawing.Color.IndianRed;
             this.ClientSize = new System.Drawing.Size(736, 704);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -396,6 +412,7 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -428,6 +445,7 @@
         private System.Windows.Forms.Button btnEnviar;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.PictureBox picBox;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
