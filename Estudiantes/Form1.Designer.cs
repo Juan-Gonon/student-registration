@@ -53,13 +53,13 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnEnviar = new System.Windows.Forms.Button();
-            this.picBox = new System.Windows.Forms.PictureBox();
+            this.picBoxImage = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gbMenu.SuspendLayout();
             this.bgMenu2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -244,7 +244,7 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.picBox);
+            this.groupBox3.Controls.Add(this.picBoxImage);
             this.groupBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox3.Location = new System.Drawing.Point(63, 76);
             this.groupBox3.Name = "groupBox3";
@@ -368,17 +368,18 @@
             this.btnEnviar.TabIndex = 7;
             this.btnEnviar.UseVisualStyleBackColor = false;
             // 
-            // picBox
+            // picBoxImage
             // 
-            this.picBox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picBox.Image = global::Estudiantes.Properties.Resources.image;
-            this.picBox.Location = new System.Drawing.Point(63, 31);
-            this.picBox.Name = "picBox";
-            this.picBox.Size = new System.Drawing.Size(48, 48);
-            this.picBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.picBox.TabIndex = 0;
-            this.picBox.TabStop = false;
-            this.picBox.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.picBoxImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picBoxImage.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picBoxImage.Image = global::Estudiantes.Properties.Resources.image;
+            this.picBoxImage.Location = new System.Drawing.Point(63, 31);
+            this.picBoxImage.Name = "picBoxImage";
+            this.picBoxImage.Size = new System.Drawing.Size(48, 48);
+            this.picBoxImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.picBoxImage.TabIndex = 0;
+            this.picBoxImage.TabStop = false;
+            this.picBoxImage.Click += new System.EventHandler(this.picBoxImage_Click);
             // 
             // pictureBox1
             // 
@@ -412,7 +413,7 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -445,7 +446,7 @@
         private System.Windows.Forms.Button btnEnviar;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.PictureBox picBox;
+        private System.Windows.Forms.PictureBox picBoxImage;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
