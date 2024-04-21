@@ -14,12 +14,19 @@ namespace Estudiantes
     public partial class Form1 : Form
     {
 
-        private LEstudiantes estudiante = new LEstudiantes();
+        private LEstudiantes estudiante;
 
         public Form1()
         {
             InitializeComponent();
 
+            var listTextBox = new List<TextBox>();
+            listTextBox.Add(txtBoxNid);
+            listTextBox.Add(txtBoxNombre);
+            listTextBox.Add(txtBoxApellido);
+            listTextBox.Add(txtBoxEmail);
+            estudiante = new LEstudiantes(listTextBox);
+      
 
         }
 
@@ -99,6 +106,11 @@ namespace Estudiantes
             {
                 lblEmail.ForeColor = Color.LightSlateGray;
             }
+        }
+
+        private void btnEnviar_Click(object sender, EventArgs e)
+        {
+            estudiante.getListBox();
         }
     }
 }
