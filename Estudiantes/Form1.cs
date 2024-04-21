@@ -49,7 +49,7 @@ namespace Estudiantes
 
         private void txtBoxNid_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+            estudiante.textBoxEvent.numKeyPress(e);
         }
 
         private void txtBoxNombre_TextChanged(object sender, EventArgs e)
@@ -86,7 +86,7 @@ namespace Estudiantes
 
         private void txtBoxApellido_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+            estudiante.textBoxEvent.textKeyPress(e);
         }
 
         private void txtBoxEmail_TextChanged(object sender, EventArgs e)
