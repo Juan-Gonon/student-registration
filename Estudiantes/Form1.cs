@@ -33,5 +33,71 @@ namespace Estudiantes
         {
             estudiante.CargarImagen(picBoxImage);
         }
+
+        private void txtBoxNid_TextChanged(object sender, EventArgs e)
+        {
+            if(txtBoxNid.Text != String.Empty)
+            {
+                lblNid.ForeColor = Color.Green;
+                lblNid.Text = "Nid";
+            }
+            else
+            {
+                lblNid.ForeColor = Color.LightSlateGray;
+            }
+        }
+
+        private void txtBoxNid_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void txtBoxNombre_TextChanged(object sender, EventArgs e)
+        {
+            if(txtBoxNombre.Text != String.Empty)
+            {
+                lblNombre.ForeColor = Color.Green;
+                
+            }
+            else
+            {
+                lblNombre.ForeColor= Color.LightSlateGray;
+              
+            }
+        }
+
+        private void txtBoxNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            
+        }
+
+        private void txtBoxApellido_TextChanged(object sender, EventArgs e)
+        {
+            if(txtBoxApellido.Text != String.Empty)
+            {
+                lblApellido.ForeColor = Color.Green;
+            }
+            else
+            {
+                lblApellido.ForeColor = Color.LightSlateGray;
+            }
+        }
+
+        private void txtBoxApellido_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void txtBoxEmail_TextChanged(object sender, EventArgs e)
+        {
+            if( txtBoxEmail.Text != String.Empty)
+            {
+                lblEmail.ForeColor = Color.Green;
+            }
+            else
+            {
+                lblEmail.ForeColor = Color.LightSlateGray;
+            }
+        }
     }
 }
