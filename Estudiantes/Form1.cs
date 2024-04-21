@@ -31,7 +31,7 @@ namespace Estudiantes
      
         private void picBoxImage_Click(object sender, EventArgs e)
         {
-            estudiante.CargarImagen(picBoxImage);
+            estudiante.uploadingimage.CargarImagen(picBoxImage);
         }
 
         private void txtBoxNid_TextChanged(object sender, EventArgs e)
@@ -68,7 +68,8 @@ namespace Estudiantes
 
         private void txtBoxNombre_KeyPress(object sender, KeyPressEventArgs e)
         {
-            
+            Console.WriteLine(e);
+            estudiante.textBoxEvent.textKeyPress(e);
         }
 
         private void txtBoxApellido_TextChanged(object sender, EventArgs e)
