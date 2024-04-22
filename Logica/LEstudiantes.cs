@@ -13,11 +13,13 @@ namespace Logica
     {
         private List<TextBox> listTextBox;
         private List<Label> listLabel;
+        private PictureBox image;
 
-        public LEstudiantes(List<TextBox> listTextBox, List<Label> listLabel)
+        public LEstudiantes(List<TextBox> listTextBox, List<Label> listLabel, Object[] objeto)
         {
             this.listTextBox = listTextBox;
             this.listLabel = listLabel;
+            this.image = (PictureBox)objeto[0];
         }
 
         
@@ -47,6 +49,10 @@ namespace Logica
                         listLabel[Contador].Text = "Email no valido";
                         this.listLabel[Contador].ForeColor = Color.Red;
                         this.listTextBox[Contador].Focus();
+                    }
+                    else
+                    {
+                        var imageArray = uploadingimage.ImageToByte(this.image.Image);
                     }
                 }
 

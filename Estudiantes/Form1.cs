@@ -32,7 +32,11 @@ namespace Estudiantes
             listLabel.Add(lblNombre);
             listLabel.Add(lblApellido);
             listLabel.Add(lblEmail);
-            estudiante = new LEstudiantes(listTextBox, listLabel);
+          
+
+            Object[] objetos = { picBoxImage };
+
+            estudiante = new LEstudiantes(listTextBox, listLabel, objetos);
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
