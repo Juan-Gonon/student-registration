@@ -222,7 +222,7 @@
             // 
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Cascadia Code", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(32, 333);
+            this.lblEmail.Location = new System.Drawing.Point(18, 330);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(56, 18);
             this.lblEmail.TabIndex = 8;
@@ -245,7 +245,7 @@
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Cascadia Code", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(32, 281);
+            this.lblNombre.Location = new System.Drawing.Point(18, 281);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(64, 18);
             this.lblNombre.TabIndex = 6;
@@ -293,11 +293,11 @@
             // 
             this.lblNid.AutoSize = true;
             this.lblNid.Font = new System.Drawing.Font("Cascadia Code", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNid.Location = new System.Drawing.Point(32, 223);
+            this.lblNid.Location = new System.Drawing.Point(18, 229);
             this.lblNid.Name = "lblNid";
-            this.lblNid.Size = new System.Drawing.Size(32, 18);
+            this.lblNid.Size = new System.Drawing.Size(40, 18);
             this.lblNid.TabIndex = 2;
-            this.lblNid.Text = "Nid";
+            this.lblNid.Text = "Nid:";
             // 
             // txtBoxNid
             // 

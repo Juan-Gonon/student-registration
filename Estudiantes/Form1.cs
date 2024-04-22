@@ -16,6 +16,7 @@ namespace Estudiantes
 
         private LEstudiantes estudiante;
 
+
         public Form1()
         {
             InitializeComponent();
@@ -25,9 +26,13 @@ namespace Estudiantes
             listTextBox.Add(txtBoxNombre);
             listTextBox.Add(txtBoxApellido);
             listTextBox.Add(txtBoxEmail);
-            estudiante = new LEstudiantes(listTextBox);
-      
 
+            var listLabel = new List<Label>();
+            listLabel.Add(lblNid);
+            listLabel.Add(lblNombre);
+            listLabel.Add(lblApellido);
+            listLabel.Add(lblEmail);
+            estudiante = new LEstudiantes(listTextBox, listLabel);
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -46,7 +51,7 @@ namespace Estudiantes
             if(txtBoxNid.Text != String.Empty)
             {
                 lblNid.ForeColor = Color.Green;
-                lblNid.Text = "Nid";
+                lblNid.Text = "Nid: ";
             }
             else
             {
@@ -64,6 +69,7 @@ namespace Estudiantes
             if(txtBoxNombre.Text != String.Empty)
             {
                 lblNombre.ForeColor = Color.Green;
+                lblNombre.Text = "Nombre: ";
                 
             }
             else
@@ -84,6 +90,7 @@ namespace Estudiantes
             if(txtBoxApellido.Text != String.Empty)
             {
                 lblApellido.ForeColor = Color.Green;
+                lblApellido.Text = "Apellido: ";
             }
             else
             {
@@ -101,6 +108,7 @@ namespace Estudiantes
             if( txtBoxEmail.Text != String.Empty)
             {
                 lblEmail.ForeColor = Color.Green;
+                lblEmail.Text = "Email: ";
             }
             else
             {
@@ -110,7 +118,8 @@ namespace Estudiantes
 
         private void btnEnviar_Click(object sender, EventArgs e)
         {
-            estudiante.getListBox();
+            //estudiante.getListBox();
+            estudiante.Registrar();
         }
     }
 }
