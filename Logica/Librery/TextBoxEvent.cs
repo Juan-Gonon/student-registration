@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -30,6 +31,12 @@ namespace Logica.Librery
             {
                 e.Handled = true;
             }
+        }
+
+        public bool FormatEmail(string email)
+        {
+            return new EmailAddressAttribute().IsValid(email);
+
         }
 
     }

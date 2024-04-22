@@ -104,7 +104,7 @@ namespace Estudiantes
         }
 
         private void txtBoxEmail_TextChanged(object sender, EventArgs e)
-        {
+       {
             if( txtBoxEmail.Text != String.Empty)
             {
                 lblEmail.ForeColor = Color.Green;

@@ -24,6 +24,11 @@ namespace Logica
         public void Registrar()
         {
             int Contador = 0;
+            var email = this.listLabel[3].Text;
+
+
+            //var email = ;
+
 
             this.listTextBox.ForEach(textBox=>
             {
@@ -32,11 +37,21 @@ namespace Logica
                     this.listLabel[Contador].Text = $"{this.listLabel[Contador].Text}requerido";
                     this.listLabel[Contador].ForeColor = Color.Red;
                     this.listTextBox[Contador].Focus();
+
                 }
-                else
+
+                if (this.listLabel[Contador].Text == email)
                 {
-                    Console.WriteLine(textBox.Text);
+                    if (!textBoxEvent.FormatEmail(Convert.ToString(textBox)))
+                    {
+                        listLabel[Contador].Text = "Email no valido";
+                        this.listLabel[Contador].ForeColor = Color.Red;
+                        this.listTextBox[Contador].Focus();
+                    }
                 }
+
+
+
                 Contador++;
             });
 
