@@ -60,6 +60,17 @@ namespace Logica
                     {
                         var imageArray = this.librarys.uploadingimage.ImageToByte(this.image.Image);
 
+                        //using (var db = new Conexion())
+                        //{
+                        //    db.Insert(new Estudiante()
+                        //    {
+                        //        nid = listTextBox[0].Text,
+                        //        nombre = listTextBox[1].Text,
+                        //        apellido = listTextBox[2].Text,
+                        //        email = listTextBox[3].Text,
+                        //    });
+                        //}
+
                         var db = new Conexion();
 
                         db.Insert(new Estudiante()
@@ -69,6 +80,8 @@ namespace Logica
                             apellido = listTextBox[2].Text,
                             email = listTextBox[3].Text,
                         });
+
+
 
                     }
                 }
