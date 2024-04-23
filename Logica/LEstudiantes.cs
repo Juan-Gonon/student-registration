@@ -11,20 +11,20 @@ using LinqToDB;
 
 namespace Logica
 {
-    public class LEstudiantes : Conexion
+    public class LEstudiantes : Library
     {
         private List<TextBox> listTextBox;
         private List<Label> listLabel;
         private PictureBox image;
 
-        private Library librarys;
+        //private Library librarys;
 
 
         public LEstudiantes(List<TextBox> listTextBox, List<Label> listLabel, Object[] objeto)
         {
             this.listTextBox = listTextBox;
             this.listLabel = listLabel;
-            this.librarys = new Library();
+            //this.librarys = new Library();
             this.image = (PictureBox)objeto[0];
         }
 
@@ -50,7 +50,7 @@ namespace Logica
 
                 if (this.listLabel[Contador].Text == email)
                 {
-                    if (!this.librarys.textBoxEvent.FormatEmail(Convert.ToString(textBox)))
+                    if (!textBoxEvent.FormatEmail(Convert.ToString(textBox)))
                     {
                         listLabel[Contador].Text = "Email no valido";
                         this.listLabel[Contador].ForeColor = Color.Red;
@@ -58,18 +58,8 @@ namespace Logica
                     }
                     else
                     {
-                        var imageArray = this.librarys.uploadingimage.ImageToByte(this.image.Image);
+                        var imageArray = uploadingimage.ImageToByte(this.image.Image);
 
-                        //using (var db = new Conexion())
-                        //{
-                        //    db.Insert(new Estudiante()
-                        //    {
-                        //        nid = listTextBox[0].Text,
-                        //        nombre = listTextBox[1].Text,
-                        //        apellido = listTextBox[2].Text,
-                        //        email = listTextBox[3].Text,
-                        //    });
-                        //}
 
                         var db = new Conexion();
 

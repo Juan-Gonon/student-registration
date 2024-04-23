@@ -12,7 +12,7 @@ namespace Data
     public class Conexion : DataConnection
     {
 
-        public Conexion() : base("PDHN2") {}
+        public Conexion() : base("PDHN1") {}
 
         //public ITable<Estudiante> _Estudiante => this.GetTable<Estudiante>();
 

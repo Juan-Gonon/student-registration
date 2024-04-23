@@ -17,14 +17,14 @@ namespace Estudiantes
     {
 
         private LEstudiantes estudiante;
-        private Library librarys;
+       // private Library librarys;
 
 
         public Form1()
         {
             InitializeComponent();
 
-            this.librarys = new Library();    
+            //this.librarys = new Library();    
 
             var listTextBox = new List<TextBox>();
             listTextBox.Add(txtBoxNid);
@@ -52,7 +52,7 @@ namespace Estudiantes
      
         private void picBoxImage_Click(object sender, EventArgs e)
         {
-            librarys.uploadingimage.CargarImagen(picBoxImage);
+            estudiante.uploadingimage.CargarImagen(picBoxImage);
         }
 
         private void txtBoxNid_TextChanged(object sender, EventArgs e)
@@ -70,7 +70,7 @@ namespace Estudiantes
 
         private void txtBoxNid_KeyPress(object sender, KeyPressEventArgs e)
         {
-            librarys.textBoxEvent.numKeyPress(e);
+            estudiante.textBoxEvent.numKeyPress(e);
         }
 
         private void txtBoxNombre_TextChanged(object sender, EventArgs e)
@@ -91,7 +91,7 @@ namespace Estudiantes
         private void txtBoxNombre_KeyPress(object sender, KeyPressEventArgs e)
         {
             Console.WriteLine(e);
-            librarys.textBoxEvent.textKeyPress(e);
+            estudiante.textBoxEvent.textKeyPress(e);
         }
 
         private void txtBoxApellido_TextChanged(object sender, EventArgs e)
@@ -109,7 +109,7 @@ namespace Estudiantes
 
         private void txtBoxApellido_KeyPress(object sender, KeyPressEventArgs e)
         {
-            librarys.textBoxEvent.textKeyPress(e);
+            estudiante.textBoxEvent.textKeyPress(e);
         }
 
         private void txtBoxEmail_TextChanged(object sender, EventArgs e)
