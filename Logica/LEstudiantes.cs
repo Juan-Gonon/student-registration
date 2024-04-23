@@ -75,6 +75,7 @@ namespace Logica
                         .Value(e => e.nombre, listTextBox[1].Text)
                         .Value(e => e.apellido, listTextBox[2].Text)
                         .Value(e => e.email, listTextBox[3].Text)
+                         .Value(e => e.image, imageArray)
                         .Insert()
                         ;
 
