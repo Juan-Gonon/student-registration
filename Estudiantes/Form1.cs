@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Logica;
+using Logica.Librery;
+
 
 namespace Estudiantes
 {
@@ -15,11 +17,14 @@ namespace Estudiantes
     {
 
         private LEstudiantes estudiante;
+        private Library librarys;
 
 
         public Form1()
         {
             InitializeComponent();
+
+            this.librarys = new Library();    
 
             var listTextBox = new List<TextBox>();
             listTextBox.Add(txtBoxNid);
@@ -47,7 +52,7 @@ namespace Estudiantes
      
         private void picBoxImage_Click(object sender, EventArgs e)
         {
-            estudiante.uploadingimage.CargarImagen(picBoxImage);
+            librarys.uploadingimage.CargarImagen(picBoxImage);
         }
 
         private void txtBoxNid_TextChanged(object sender, EventArgs e)
@@ -65,7 +70,7 @@ namespace Estudiantes
 
         private void txtBoxNid_KeyPress(object sender, KeyPressEventArgs e)
         {
-            estudiante.textBoxEvent.numKeyPress(e);
+            librarys.textBoxEvent.numKeyPress(e);
         }
 
         private void txtBoxNombre_TextChanged(object sender, EventArgs e)
@@ -86,7 +91,7 @@ namespace Estudiantes
         private void txtBoxNombre_KeyPress(object sender, KeyPressEventArgs e)
         {
             Console.WriteLine(e);
-            estudiante.textBoxEvent.textKeyPress(e);
+            librarys.textBoxEvent.textKeyPress(e);
         }
 
         private void txtBoxApellido_TextChanged(object sender, EventArgs e)
@@ -104,7 +109,7 @@ namespace Estudiantes
 
         private void txtBoxApellido_KeyPress(object sender, KeyPressEventArgs e)
         {
-            estudiante.textBoxEvent.textKeyPress(e);
+            librarys.textBoxEvent.textKeyPress(e);
         }
 
         private void txtBoxEmail_TextChanged(object sender, EventArgs e)
