@@ -106,6 +106,8 @@ namespace Estudiantes
                 lblApellido.ForeColor = Color.LightSlateGray;
             }
         }
+        
+  
 
         private void txtBoxApellido_KeyPress(object sender, KeyPressEventArgs e)
         {
