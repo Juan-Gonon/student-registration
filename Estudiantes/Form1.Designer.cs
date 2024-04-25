@@ -423,6 +423,8 @@
             // 
             this.dataTable.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataTable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataTable.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
             this.dataTable.BackgroundColor = System.Drawing.Color.DarkMagenta;
             this.dataTable.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -439,6 +441,7 @@
             this.dataTable.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
             this.dataTable.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataTable.Size = new System.Drawing.Size(354, 392);
             this.dataTable.TabIndex = 0;
             // 

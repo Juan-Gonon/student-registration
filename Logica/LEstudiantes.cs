@@ -144,6 +144,10 @@ namespace Logica
                     c.apellido,
                     c.email
                 }).Skip(inicio).Take(_reg_por_pagina).ToList();
+
+                this._dataGrid.Columns[0].Visible = false;
+                this._dataGrid.Columns[1].DefaultCellStyle.BackColor = Color.WhiteSmoke;
+                this._dataGrid.Columns[3].DefaultCellStyle.BackColor = Color.WhiteSmoke;
             }
 
 
