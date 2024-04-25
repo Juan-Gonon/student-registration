@@ -18,6 +18,7 @@ namespace Logica
         private PictureBox image;
         private Bitmap _imgBitmap;
         private DataGridView _dataGrid;
+        private NumericUpDown _numericUpDown;
 
         //private Library librarys;
 
@@ -30,6 +31,7 @@ namespace Logica
             this.image = (PictureBox)objeto[0];
             this._imgBitmap = (Bitmap)objeto[1];
             this._dataGrid = (DataGridView)objeto[2];
+            this._numericUpDown = (NumericUpDown)objeto[3];
             Restablecer();
         }
 

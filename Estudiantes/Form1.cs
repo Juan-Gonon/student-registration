@@ -37,12 +37,14 @@ namespace Estudiantes
             listLabel.Add(lblNombre);
             listLabel.Add(lblApellido);
             listLabel.Add(lblEmail);
+            listLabel.Add(lblPage);
           
 
             Object[] objetos = { 
                 picBoxImage,
                 Properties.Resources.image,
-                dataTable
+                dataTable,
+                numPage
             };
 
             estudiante = new LEstudiantes(listTextBox, listLabel, objetos);
