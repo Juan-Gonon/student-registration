@@ -60,24 +60,27 @@ namespace Logica
                     {
                         var imageArray = uploadingimage.ImageToByte(this.image.Image);
 
+                        BeginTransactionAsync();
 
-                        //var db = new Conexion();
+                        try
+                        {
 
-                        //db.Insert(new Estudiante()
-                        //{
-                        //    nid = listTextBox[0].Text,
-                        //    nombre = listTextBox[1].Text,
-                        //    apellido = listTextBox[2].Text,
-                        //    email = listTextBox[3].Text,
-                        //});
+                            _Estudiante.Value(e => e.nid, listTextBox[0].Text)
+                            .Value(e => e.nombre, listTextBox[1].Text)
+                            .Value(e => e.apellido, listTextBox[2].Text)
+                            .Value(e => e.email, listTextBox[3].Text)
+                             .Value(e => e.image, imageArray)
+                            .Insert()
+                            ;
 
-                        _Estudiante.Value(e => e.nid, listTextBox[0].Text)
-                        .Value(e => e.nombre, listTextBox[1].Text)
-                        .Value(e => e.apellido, listTextBox[2].Text)
-                        .Value(e => e.email, listTextBox[3].Text)
-                         .Value(e => e.image, imageArray)
-                        .Insert()
-                        ;
+                            CommitTransaction();
+
+                        }
+                        catch (Exception e)
+                        {
+
+                        }
+
 
                     }
                 }
