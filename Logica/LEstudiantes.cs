@@ -17,6 +17,7 @@ namespace Logica
         private List<Label> listLabel;
         private PictureBox image;
         private Bitmap _imgBitmap;
+        private DataGridView _dataGrid;
 
         //private Library librarys;
 
@@ -28,6 +29,8 @@ namespace Logica
             //this.librarys = new Library();
             this.image = (PictureBox)objeto[0];
             this._imgBitmap = (Bitmap)objeto[1];
+            this._dataGrid = (DataGridView)objeto[2];
+            Restablecer();
         }
 
         
@@ -100,12 +103,47 @@ namespace Logica
                 ;
 
                 CommitTransaction();
-                Restablecer();
+                //Restablecer();
 
             }
             catch (Exception e)
             {
                 RollbackTransaction();
+            }
+
+
+        }
+
+        private int _reg_por_pagina = 2, _num_pagina = 1;
+
+        private void SearchEstudiante(string campo)
+        {
+            List<Estudiante> query = new List<Estudiante> ();
+
+            int inicio = (_num_pagina - 1) * _reg_por_pagina;
+
+            if (campo.Equals(""))
+            {
+                query = _Estudiante.ToList();
+            }
+            else
+            {
+                query = _Estudiante.Where(c => c.nid.StartsWith(campo)
+                || c.nombre.StartsWith(campo)
+                || c.apellido.StartsWith(campo)
+                ).ToList();
+            }
+
+            if(query.Count > 0)
+            {
+                this._dataGrid.DataSource = query.Select(c => new
+                {
+                    c.id,
+                    c.nid,
+                    c.nombre,
+                    c.apellido,
+                    c.email
+                }).Skip(inicio).Take(_reg_por_pagina).ToList();
             }
 
 
@@ -130,6 +168,8 @@ namespace Logica
                 element.Text = "";
             });
 
+
+            SearchEstudiante("");
         }
 
     }

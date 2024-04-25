@@ -41,7 +41,8 @@ namespace Estudiantes
 
             Object[] objetos = { 
                 picBoxImage,
-                Properties.Resources.image
+                Properties.Resources.image,
+                dataTable
             };
 
             estudiante = new LEstudiantes(listTextBox, listLabel, objetos);
