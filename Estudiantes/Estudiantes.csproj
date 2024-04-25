@@ -189,5 +189,20 @@
       <Name>Logica</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backg1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuarios.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user2.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

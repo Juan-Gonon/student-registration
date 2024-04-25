@@ -66,7 +66,7 @@
             // 
             // gbMenu
             // 
-            this.gbMenu.BackColor = System.Drawing.Color.IndianRed;
+            this.gbMenu.BackColor = System.Drawing.Color.Transparent;
             this.gbMenu.Controls.Add(this.pictureBox1);
             this.gbMenu.Controls.Add(this.label1);
             this.gbMenu.Dock = System.Windows.Forms.DockStyle.Top;
@@ -82,7 +82,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::Estudiantes.Properties.Resources.user;
+            this.pictureBox1.Image = global::Estudiantes.Properties.Resources.user2;
             this.pictureBox1.Location = new System.Drawing.Point(38, 22);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(100, 50);
@@ -106,7 +106,7 @@
             // 
             this.bgMenu2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.bgMenu2.BackColor = System.Drawing.Color.DarkSalmon;
+            this.bgMenu2.BackColor = System.Drawing.Color.Transparent;
             this.bgMenu2.Controls.Add(this.btnDelete);
             this.bgMenu2.Controls.Add(this.btnCancel);
             this.bgMenu2.Controls.Add(this.btnEnviar);
@@ -230,7 +230,7 @@
             // 
             // txtBoxEmail
             // 
-            this.txtBoxEmail.BackColor = System.Drawing.Color.DarkSalmon;
+            this.txtBoxEmail.BackColor = System.Drawing.Color.DarkMagenta;
             this.txtBoxEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBoxEmail.Font = new System.Drawing.Font("Cascadia Code", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxEmail.ForeColor = System.Drawing.Color.White;
@@ -245,7 +245,7 @@
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Cascadia Code", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(18, 281);
+            this.lblNombre.Location = new System.Drawing.Point(18, 278);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(64, 18);
             this.lblNombre.TabIndex = 6;
@@ -253,7 +253,7 @@
             // 
             // txtBoxNombre
             // 
-            this.txtBoxNombre.BackColor = System.Drawing.Color.DarkSalmon;
+            this.txtBoxNombre.BackColor = System.Drawing.Color.DarkMagenta;
             this.txtBoxNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBoxNombre.Font = new System.Drawing.Font("Cascadia Code", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxNombre.ForeColor = System.Drawing.Color.White;
@@ -269,7 +269,7 @@
             // 
             this.lblApellido.AutoSize = true;
             this.lblApellido.Font = new System.Drawing.Font("Cascadia Code", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblApellido.Location = new System.Drawing.Point(170, 281);
+            this.lblApellido.Location = new System.Drawing.Point(170, 278);
             this.lblApellido.Name = "lblApellido";
             this.lblApellido.Size = new System.Drawing.Size(80, 18);
             this.lblApellido.TabIndex = 4;
@@ -277,7 +277,7 @@
             // 
             // txtBoxApellido
             // 
-            this.txtBoxApellido.BackColor = System.Drawing.Color.DarkSalmon;
+            this.txtBoxApellido.BackColor = System.Drawing.Color.DarkMagenta;
             this.txtBoxApellido.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBoxApellido.Font = new System.Drawing.Font("Cascadia Code", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxApellido.ForeColor = System.Drawing.Color.White;
@@ -293,7 +293,7 @@
             // 
             this.lblNid.AutoSize = true;
             this.lblNid.Font = new System.Drawing.Font("Cascadia Code", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNid.Location = new System.Drawing.Point(18, 229);
+            this.lblNid.Location = new System.Drawing.Point(18, 220);
             this.lblNid.Name = "lblNid";
             this.lblNid.Size = new System.Drawing.Size(40, 18);
             this.lblNid.TabIndex = 2;
@@ -301,7 +301,7 @@
             // 
             // txtBoxNid
             // 
-            this.txtBoxNid.BackColor = System.Drawing.Color.DarkSalmon;
+            this.txtBoxNid.BackColor = System.Drawing.Color.Purple;
             this.txtBoxNid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBoxNid.Font = new System.Drawing.Font("Cascadia Code", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxNid.ForeColor = System.Drawing.Color.White;
@@ -341,7 +341,7 @@
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.BackColor = System.Drawing.Color.LightCoral;
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox1.ForeColor = System.Drawing.Color.White;
@@ -392,7 +392,7 @@
             // 
             // txtBuscar
             // 
-            this.txtBuscar.BackColor = System.Drawing.Color.IndianRed;
+            this.txtBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(2)))), ((int)(((byte)(2)))));
             this.txtBuscar.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBuscar.Font = new System.Drawing.Font("Cascadia Code", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBuscar.ForeColor = System.Drawing.Color.White;
@@ -417,12 +417,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.IndianRed;
+            this.BackColor = System.Drawing.Color.Black;
+            this.BackgroundImage = global::Estudiantes.Properties.Resources.back2;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(736, 704);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.bgMenu2);
             this.Controls.Add(this.gbMenu);
+            this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Cascadia Code", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.White;
             this.Name = "Form1";
