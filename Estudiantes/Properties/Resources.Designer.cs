@@ -63,6 +63,26 @@ namespace Estudiantes.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap arrow_left_21094 {
+            get {
+                object obj = ResourceManager.GetObject("arrow_left_21094", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap arrow_right_21093 {
+            get {
+                object obj = ResourceManager.GetObject("arrow_right_21093", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap back2 {
             get {
                 object obj = ResourceManager.GetObject("back2", resourceCulture);
@@ -86,6 +106,26 @@ namespace Estudiantes.Properties {
         internal static System.Drawing.Bitmap backg1 {
             get {
                 object obj = ResourceManager.GetObject("backg1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap forward_left {
+            get {
+                object obj = ResourceManager.GetObject("forward-left", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap forward_right {
+            get {
+                object obj = ResourceManager.GetObject("forward-right", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
