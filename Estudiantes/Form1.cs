@@ -39,7 +39,10 @@ namespace Estudiantes
             listLabel.Add(lblEmail);
           
 
-            Object[] objetos = { picBoxImage };
+            Object[] objetos = { 
+                picBoxImage,
+                Properties.Resources.image
+            };
 
             estudiante = new LEstudiantes(listTextBox, listLabel, objetos);
         }

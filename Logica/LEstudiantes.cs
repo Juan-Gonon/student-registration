@@ -16,6 +16,7 @@ namespace Logica
         private List<TextBox> listTextBox;
         private List<Label> listLabel;
         private PictureBox image;
+        private Bitmap _imgBitmap;
 
         //private Library librarys;
 
@@ -26,6 +27,7 @@ namespace Logica
             this.listLabel = listLabel;
             //this.librarys = new Library();
             this.image = (PictureBox)objeto[0];
+            this._imgBitmap = (Bitmap)objeto[1];
         }
 
         
@@ -98,6 +100,7 @@ namespace Logica
                 ;
 
                 CommitTransaction();
+                Restablecer();
 
             }
             catch (Exception e)
@@ -105,6 +108,27 @@ namespace Logica
                 RollbackTransaction();
             }
 
+
+        }
+
+        private void Restablecer()
+        {
+
+            image.Image = this._imgBitmap;
+            listLabel[0].Text = "Nid: ";
+            listLabel[1].Text = "Nombre: ";
+            listLabel[2].Text = "Apellido: ";
+            listLabel[3].Text = "Email: ";
+
+            listLabel.ForEach((element) =>
+            {
+                element.ForeColor = Color.LightSlateGray;
+            });
+
+            listTextBox.ForEach((element) =>
+            {
+                element.Text = "";
+            });
 
         }
 
