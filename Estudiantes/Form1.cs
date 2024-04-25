@@ -136,5 +136,10 @@ namespace Estudiantes
             //estudiante.getListBox();
             estudiante.Registrar();
         }
+
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            estudiante.SearchEstudiante(txtBuscar.Text);
+        }
     }
 }

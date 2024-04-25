@@ -116,7 +116,7 @@ namespace Logica
 
         private int _reg_por_pagina = 2, _num_pagina = 1;
 
-        private void SearchEstudiante(string campo)
+        public void SearchEstudiante(string campo)
         {
             List<Estudiante> query = new List<Estudiante> ();
 
@@ -148,6 +148,17 @@ namespace Logica
                 this._dataGrid.Columns[0].Visible = false;
                 this._dataGrid.Columns[1].DefaultCellStyle.BackColor = Color.WhiteSmoke;
                 this._dataGrid.Columns[3].DefaultCellStyle.BackColor = Color.WhiteSmoke;
+            }
+            else
+            {
+                this._dataGrid.DataSource = query.Select(c =>
+                new
+                {
+                    c.id,
+                    c.nombre,
+                    c.apellido,
+                    c.email
+                }).ToList();
             }
 
 
