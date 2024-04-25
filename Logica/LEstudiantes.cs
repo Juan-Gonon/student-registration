@@ -58,30 +58,18 @@ namespace Logica
                     }
                     else
                     {
-                        var imageArray = uploadingimage.ImageToByte(this.image.Image);
+                        var user = _Estudiante.Where(u => u.email.Equals(listTextBox[3].Text)).ToList();
 
-                        BeginTransactionAsync();
-
-                        try
+                        if (user.Count.Equals(0))
                         {
-
-                            _Estudiante.Value(e => e.nid, listTextBox[0].Text)
-                            .Value(e => e.nombre, listTextBox[1].Text)
-                            .Value(e => e.apellido, listTextBox[2].Text)
-                            .Value(e => e.email, listTextBox[3].Text)
-                             .Value(e => e.image, imageArray)
-                            .Insert()
-                            ;
-
-                            CommitTransaction();
-
+                            Save();
                         }
-                        catch (Exception e)
+                        else
                         {
-
+                            listLabel[Contador].Text = "Email ya esta registrado";
+                            this.listLabel[Contador].ForeColor = Color.Red;
+                            this.listTextBox[Contador].Focus();
                         }
-
-
                     }
                 }
 
@@ -91,5 +79,34 @@ namespace Logica
             });
 
         }
+
+        private void Save()
+        {
+
+            var imageArray = uploadingimage.ImageToByte(this.image.Image);
+
+            BeginTransactionAsync();
+
+            try
+            {
+                _Estudiante.Value(e => e.nid, listTextBox[0].Text)
+                .Value(e => e.nombre, listTextBox[1].Text)
+                .Value(e => e.apellido, listTextBox[2].Text)
+                .Value(e => e.email, listTextBox[3].Text)
+                 .Value(e => e.image, imageArray)
+                .Insert()
+                ;
+
+                CommitTransaction();
+
+            }
+            catch (Exception e)
+            {
+                RollbackTransaction();
+            }
+
+
+        }
+
     }
 }
