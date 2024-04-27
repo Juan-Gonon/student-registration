@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.GroupBox gbMenu;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.gbMenu = new System.Windows.Forms.GroupBox();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.bgMenu2 = new System.Windows.Forms.GroupBox();
@@ -53,6 +53,8 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.picBoxImage = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.numPage = new System.Windows.Forms.NumericUpDown();
+            this.lblPage = new System.Windows.Forms.Label();
             this.btnLast = new System.Windows.Forms.Button();
             this.btnNext = new System.Windows.Forms.Button();
             this.btnPrev = new System.Windows.Forms.Button();
@@ -63,34 +65,36 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.lblPage = new System.Windows.Forms.Label();
-            this.numPage = new System.Windows.Forms.NumericUpDown();
-            this.gbMenu.SuspendLayout();
+            gbMenu = new System.Windows.Forms.GroupBox();
+            gbMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.bgMenu2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxImage)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numPage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTable)).BeginInit();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numPage)).BeginInit();
             this.SuspendLayout();
             // 
             // gbMenu
             // 
-            this.gbMenu.BackColor = System.Drawing.Color.Transparent;
-            this.gbMenu.Controls.Add(this.pictureBox1);
-            this.gbMenu.Controls.Add(this.label1);
-            this.gbMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gbMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.gbMenu.Font = new System.Drawing.Font("Cascadia Code", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbMenu.ForeColor = System.Drawing.Color.White;
-            this.gbMenu.Location = new System.Drawing.Point(0, 0);
-            this.gbMenu.Name = "gbMenu";
-            this.gbMenu.Size = new System.Drawing.Size(736, 80);
-            this.gbMenu.TabIndex = 0;
-            this.gbMenu.TabStop = false;
-            this.gbMenu.Text = "Menu";
+            gbMenu.BackColor = System.Drawing.Color.Transparent;
+            gbMenu.Controls.Add(this.pictureBox1);
+            gbMenu.Controls.Add(this.label1);
+            gbMenu.Cursor = System.Windows.Forms.Cursors.Default;
+            gbMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            gbMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            gbMenu.Font = new System.Drawing.Font("Cascadia Code", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            gbMenu.ForeColor = System.Drawing.Color.White;
+            gbMenu.Location = new System.Drawing.Point(0, 0);
+            gbMenu.Margin = new System.Windows.Forms.Padding(0);
+            gbMenu.Name = "gbMenu";
+            gbMenu.Size = new System.Drawing.Size(736, 80);
+            gbMenu.TabIndex = 0;
+            gbMenu.TabStop = false;
+            gbMenu.Text = "Menu";
+            gbMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.gbMenu_Paint);
             // 
             // pictureBox1
             // 
@@ -371,6 +375,35 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Lista de estudiantes";
             // 
+            // numPage
+            // 
+            this.numPage.Font = new System.Drawing.Font("Cascadia Code", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numPage.Location = new System.Drawing.Point(6, 434);
+            this.numPage.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numPage.Name = "numPage";
+            this.numPage.Size = new System.Drawing.Size(62, 23);
+            this.numPage.TabIndex = 13;
+            this.numPage.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.numPage.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // lblPage
+            // 
+            this.lblPage.AutoSize = true;
+            this.lblPage.Font = new System.Drawing.Font("Cascadia Code", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPage.Location = new System.Drawing.Point(165, 390);
+            this.lblPage.Name = "lblPage";
+            this.lblPage.Size = new System.Drawing.Size(56, 18);
+            this.lblPage.TabIndex = 12;
+            this.lblPage.Text = "Página";
+            // 
             // btnLast
             // 
             this.btnLast.BackColor = System.Drawing.Color.Transparent;
@@ -451,16 +484,16 @@
             this.dataTable.GridColor = System.Drawing.Color.Chocolate;
             this.dataTable.Location = new System.Drawing.Point(20, 68);
             this.dataTable.Name = "dataTable";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Cascadia Code", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataTable.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            this.dataTable.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle35.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle35.Font = new System.Drawing.Font("Cascadia Code", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle35.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle35.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle35.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle35.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataTable.RowHeadersDefaultCellStyle = dataGridViewCellStyle35;
+            dataGridViewCellStyle36.ForeColor = System.Drawing.Color.Black;
+            this.dataTable.RowsDefaultCellStyle = dataGridViewCellStyle36;
             this.dataTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataTable.Size = new System.Drawing.Size(354, 303);
             this.dataTable.TabIndex = 0;
@@ -470,6 +503,7 @@
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.AutoSize = true;
+            this.groupBox2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
             this.groupBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.groupBox2.Controls.Add(this.label3);
@@ -480,16 +514,17 @@
             this.groupBox2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.groupBox2.Location = new System.Drawing.Point(0, 80);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(736, 63);
+            this.groupBox2.Size = new System.Drawing.Size(728, 63);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
+            this.groupBox2.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox2_Paint);
             // 
             // label3
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Cascadia Code", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(7, 17);
+            this.label3.Location = new System.Drawing.Point(3, 17);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(156, 29);
             this.label3.TabIndex = 6;
@@ -528,35 +563,6 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Buscar";
             // 
-            // lblPage
-            // 
-            this.lblPage.AutoSize = true;
-            this.lblPage.Font = new System.Drawing.Font("Cascadia Code", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPage.Location = new System.Drawing.Point(165, 390);
-            this.lblPage.Name = "lblPage";
-            this.lblPage.Size = new System.Drawing.Size(56, 18);
-            this.lblPage.TabIndex = 12;
-            this.lblPage.Text = "Página";
-            // 
-            // numPage
-            // 
-            this.numPage.Font = new System.Drawing.Font("Cascadia Code", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numPage.Location = new System.Drawing.Point(6, 434);
-            this.numPage.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numPage.Name = "numPage";
-            this.numPage.Size = new System.Drawing.Size(62, 23);
-            this.numPage.TabIndex = 13;
-            this.numPage.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.numPage.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 15F);
@@ -568,15 +574,15 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.bgMenu2);
-            this.Controls.Add(this.gbMenu);
+            this.Controls.Add(gbMenu);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Cascadia Code", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.White;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Systema de estudiante";
-            this.gbMenu.ResumeLayout(false);
-            this.gbMenu.PerformLayout();
+            gbMenu.ResumeLayout(false);
+            gbMenu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.bgMenu2.ResumeLayout(false);
             this.bgMenu2.PerformLayout();
@@ -584,18 +590,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.picBoxImage)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numPage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTable)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numPage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.GroupBox gbMenu;
         private System.Windows.Forms.GroupBox bgMenu2;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;

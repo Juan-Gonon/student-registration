@@ -143,5 +143,21 @@ namespace Estudiantes
         {
             estudiante.SearchEstudiante(txtBuscar.Text);
         }
+
+        private void gbMenu_Paint(object sender, PaintEventArgs e)
+        {
+            GroupBox box = sender as GroupBox;
+            e.Graphics.Clear(this.BackColor); 
+            e.Graphics.DrawString(box.Text, box.Font, Brushes.Black, 0, 0);
+        }
+
+        private void groupBox2_Paint(object sender, PaintEventArgs e)
+        {
+            GroupBox box = sender as GroupBox;
+            e.Graphics.Clear(this.BackColor);
+            e.Graphics.DrawString(box.Text, box.Font, Brushes.Black, 0, 0);
+        }
+
+     
     }
 }
