@@ -178,5 +178,10 @@ namespace Estudiantes
         {
             estudiante.Paginador("Ultimo");
         }
+
+        private void numPage_ValueChanged(object sender, EventArgs e)
+        {
+            estudiante.Registro_Paginas();
+        }
     }
 }
