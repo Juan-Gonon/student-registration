@@ -158,6 +158,25 @@ namespace Estudiantes
             e.Graphics.DrawString(box.Text, box.Font, Brushes.Black, 0, 0);
         }
 
-     
+        private void btnFirst_Click(object sender, EventArgs e)
+        {
+            estudiante.Paginador("Primero");
+
+        }
+
+        private void btnPrev_Click(object sender, EventArgs e)
+        {
+            estudiante.Paginador("Anterior");
+        }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            estudiante.Paginador("Siguiente");
+        }
+
+        private void btnLast_Click(object sender, EventArgs e)
+        {
+            estudiante.Paginador("Ultimo");
+        }
     }
 }

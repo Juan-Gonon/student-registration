@@ -102,6 +102,7 @@
     <Compile Include="LEstudiantes.cs" />
     <Compile Include="Librery\Library.cs" />
     <Compile Include="Librery\LupliadImage.cs" />
+    <Compile Include="Librery\Paginator.cs" />
     <Compile Include="Librery\TextBoxEvent.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
