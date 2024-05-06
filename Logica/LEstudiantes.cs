@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Data;
 using LinqToDB;
+using System.Drawing.Text;
 
 namespace Logica
 {
@@ -21,6 +22,7 @@ namespace Logica
         private NumericUpDown _numericUpDown;
         private Paginator<Estudiante> _paginador;
         private List<Estudiante> listEstudiante;
+        private String _action = "insert";
 
         //private Library librarys;
 
@@ -146,10 +148,12 @@ namespace Logica
                     c.nid,
                     c.nombre,
                     c.apellido,
-                    c.email
+                    c.email,
+                    c.image,
                 }).Skip(inicio).Take(_reg_por_pagina).ToList();
 
                 this._dataGrid.Columns[0].Visible = false;
+                this._dataGrid.Columns[5].Visible = false;
                 this._dataGrid.Columns[1].DefaultCellStyle.BackColor = Color.WhiteSmoke;
                 this._dataGrid.Columns[3].DefaultCellStyle.BackColor = Color.WhiteSmoke;
             }
@@ -188,9 +192,17 @@ namespace Logica
             SearchEstudiante("");
         }
 
+        private int _idEstudiante = 0;
         public void getEstudiante()
         {
+            _action = "update";
+            _idEstudiante = Convert.ToInt32(_dataGrid.CurrentRow.Cells[0].Value);
+            listTextBox[0].Text = Convert.ToString(_dataGrid.CurrentRow.Cells[1].Value);
+            listTextBox[1].Text = Convert.ToString(_dataGrid.CurrentRow.Cells[2].Value);
+            listTextBox[2].Text = Convert.ToString(_dataGrid.CurrentRow.Cells[3].Value);
+            listTextBox[3].Text = Convert.ToString(_dataGrid.CurrentRow.Cells[4].Value);
 
+        
         }
 
         public void Registro_Paginas()
