@@ -202,6 +202,17 @@ namespace Logica
             listTextBox[2].Text = Convert.ToString(_dataGrid.CurrentRow.Cells[3].Value);
             listTextBox[3].Text = Convert.ToString(_dataGrid.CurrentRow.Cells[4].Value);
 
+            try
+            {
+                byte[] arrayImage = (byte[])_dataGrid.CurrentRow.Cells[5].Value;
+                image.Image = uploadingimage.byteArrayToImagen(arrayImage);
+                   
+            }
+            catch(Exception e)
+            {
+                image.Image = _imgBitmap;
+            }
+
         
         }
 
