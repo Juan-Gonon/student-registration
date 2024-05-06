@@ -188,6 +188,11 @@ namespace Logica
             SearchEstudiante("");
         }
 
+        public void getEstudiante()
+        {
+
+        }
+
         public void Registro_Paginas()
         {
             _num_pagina = 1;
