@@ -28,10 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.GroupBox gbMenu;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.gbMenu = new System.Windows.Forms.GroupBox();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.bgMenu2 = new System.Windows.Forms.GroupBox();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnEnviar = new System.Windows.Forms.Button();
             this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
@@ -45,39 +51,60 @@
             this.lblNid = new System.Windows.Forms.Label();
             this.txtBoxNid = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.picBoxImage = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.numPage = new System.Windows.Forms.NumericUpDown();
+            this.lblPage = new System.Windows.Forms.Label();
+            this.btnLast = new System.Windows.Forms.Button();
+            this.btnNext = new System.Windows.Forms.Button();
+            this.btnPrev = new System.Windows.Forms.Button();
+            this.btnFirst = new System.Windows.Forms.Button();
+            this.dataTable = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.btnCancel = new System.Windows.Forms.Button();
-            this.btnEnviar = new System.Windows.Forms.Button();
-            this.picBox = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.gbMenu.SuspendLayout();
+            gbMenu = new System.Windows.Forms.GroupBox();
+            gbMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.bgMenu2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxImage)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numPage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataTable)).BeginInit();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // gbMenu
             // 
-            this.gbMenu.BackColor = System.Drawing.Color.IndianRed;
-            this.gbMenu.Controls.Add(this.pictureBox1);
-            this.gbMenu.Controls.Add(this.label1);
-            this.gbMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gbMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.gbMenu.Font = new System.Drawing.Font("Cascadia Code", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbMenu.ForeColor = System.Drawing.Color.White;
-            this.gbMenu.Location = new System.Drawing.Point(0, 0);
-            this.gbMenu.Name = "gbMenu";
-            this.gbMenu.Size = new System.Drawing.Size(736, 80);
-            this.gbMenu.TabIndex = 0;
-            this.gbMenu.TabStop = false;
-            this.gbMenu.Text = "Menu";
+            gbMenu.BackColor = System.Drawing.Color.Transparent;
+            gbMenu.Controls.Add(this.pictureBox1);
+            gbMenu.Controls.Add(this.label1);
+            gbMenu.Cursor = System.Windows.Forms.Cursors.Default;
+            gbMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            gbMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            gbMenu.Font = new System.Drawing.Font("Cascadia Code", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            gbMenu.ForeColor = System.Drawing.Color.White;
+            gbMenu.Location = new System.Drawing.Point(0, 0);
+            gbMenu.Margin = new System.Windows.Forms.Padding(0);
+            gbMenu.Name = "gbMenu";
+            gbMenu.Size = new System.Drawing.Size(736, 80);
+            gbMenu.TabIndex = 0;
+            gbMenu.TabStop = false;
+            gbMenu.Text = "Menu";
+            gbMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.gbMenu_Paint);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Estudiantes.Properties.Resources.user2;
+            this.pictureBox1.Location = new System.Drawing.Point(38, 22);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
@@ -95,7 +122,7 @@
             // 
             this.bgMenu2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.bgMenu2.BackColor = System.Drawing.Color.DarkSalmon;
+            this.bgMenu2.BackColor = System.Drawing.Color.Transparent;
             this.bgMenu2.Controls.Add(this.btnDelete);
             this.bgMenu2.Controls.Add(this.btnCancel);
             this.bgMenu2.Controls.Add(this.btnEnviar);
@@ -121,6 +148,60 @@
             this.bgMenu2.TabIndex = 1;
             this.bgMenu2.TabStop = false;
             this.bgMenu2.Text = "Informacion del Estudiante";
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.BackColor = System.Drawing.Color.Transparent;
+            this.btnDelete.BackgroundImage = global::Estudiantes.Properties.Resources.trash;
+            this.btnDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDelete.FlatAppearance.BorderSize = 0;
+            this.btnDelete.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnDelete.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.Font = new System.Drawing.Font("Cascadia Code", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.Location = new System.Drawing.Point(173, 425);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(35, 35);
+            this.btnDelete.TabIndex = 5;
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.BackColor = System.Drawing.Color.Transparent;
+            this.btnCancel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCancel.BackgroundImage")));
+            this.btnCancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCancel.FlatAppearance.BorderSize = 0;
+            this.btnCancel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnCancel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel.Font = new System.Drawing.Font("Cascadia Code", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.Location = new System.Drawing.Point(218, 425);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(35, 35);
+            this.btnCancel.TabIndex = 6;
+            this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // btnEnviar
+            // 
+            this.btnEnviar.BackColor = System.Drawing.Color.Transparent;
+            this.btnEnviar.BackgroundImage = global::Estudiantes.Properties.Resources.save;
+            this.btnEnviar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnEnviar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEnviar.FlatAppearance.BorderSize = 0;
+            this.btnEnviar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnEnviar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnEnviar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEnviar.Font = new System.Drawing.Font("Cascadia Code", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEnviar.Location = new System.Drawing.Point(259, 425);
+            this.btnEnviar.Name = "btnEnviar";
+            this.btnEnviar.Size = new System.Drawing.Size(35, 35);
+            this.btnEnviar.TabIndex = 7;
+            this.btnEnviar.UseVisualStyleBackColor = false;
+            this.btnEnviar.Click += new System.EventHandler(this.btnEnviar_Click);
             // 
             // flowLayoutPanel4
             // 
@@ -158,7 +239,7 @@
             // 
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Cascadia Code", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(32, 333);
+            this.lblEmail.Location = new System.Drawing.Point(18, 330);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(56, 18);
             this.lblEmail.TabIndex = 8;
@@ -166,7 +247,7 @@
             // 
             // txtBoxEmail
             // 
-            this.txtBoxEmail.BackColor = System.Drawing.Color.DarkSalmon;
+            this.txtBoxEmail.BackColor = System.Drawing.Color.DarkMagenta;
             this.txtBoxEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBoxEmail.Font = new System.Drawing.Font("Cascadia Code", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxEmail.ForeColor = System.Drawing.Color.White;
@@ -175,12 +256,13 @@
             this.txtBoxEmail.Name = "txtBoxEmail";
             this.txtBoxEmail.Size = new System.Drawing.Size(242, 20);
             this.txtBoxEmail.TabIndex = 4;
+            this.txtBoxEmail.TextChanged += new System.EventHandler(this.txtBoxEmail_TextChanged);
             // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Cascadia Code", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(32, 281);
+            this.lblNombre.Location = new System.Drawing.Point(18, 278);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(64, 18);
             this.lblNombre.TabIndex = 6;
@@ -188,7 +270,7 @@
             // 
             // txtBoxNombre
             // 
-            this.txtBoxNombre.BackColor = System.Drawing.Color.DarkSalmon;
+            this.txtBoxNombre.BackColor = System.Drawing.Color.DarkMagenta;
             this.txtBoxNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBoxNombre.Font = new System.Drawing.Font("Cascadia Code", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxNombre.ForeColor = System.Drawing.Color.White;
@@ -197,12 +279,14 @@
             this.txtBoxNombre.Name = "txtBoxNombre";
             this.txtBoxNombre.Size = new System.Drawing.Size(110, 20);
             this.txtBoxNombre.TabIndex = 2;
+            this.txtBoxNombre.TextChanged += new System.EventHandler(this.txtBoxNombre_TextChanged);
+            this.txtBoxNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBoxNombre_KeyPress);
             // 
             // lblApellido
             // 
             this.lblApellido.AutoSize = true;
             this.lblApellido.Font = new System.Drawing.Font("Cascadia Code", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblApellido.Location = new System.Drawing.Point(170, 281);
+            this.lblApellido.Location = new System.Drawing.Point(170, 278);
             this.lblApellido.Name = "lblApellido";
             this.lblApellido.Size = new System.Drawing.Size(80, 18);
             this.lblApellido.TabIndex = 4;
@@ -210,7 +294,7 @@
             // 
             // txtBoxApellido
             // 
-            this.txtBoxApellido.BackColor = System.Drawing.Color.DarkSalmon;
+            this.txtBoxApellido.BackColor = System.Drawing.Color.DarkMagenta;
             this.txtBoxApellido.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBoxApellido.Font = new System.Drawing.Font("Cascadia Code", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxApellido.ForeColor = System.Drawing.Color.White;
@@ -219,20 +303,22 @@
             this.txtBoxApellido.Name = "txtBoxApellido";
             this.txtBoxApellido.Size = new System.Drawing.Size(110, 20);
             this.txtBoxApellido.TabIndex = 3;
+            this.txtBoxApellido.TextChanged += new System.EventHandler(this.txtBoxApellido_TextChanged);
+            this.txtBoxApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBoxApellido_KeyPress);
             // 
             // lblNid
             // 
             this.lblNid.AutoSize = true;
             this.lblNid.Font = new System.Drawing.Font("Cascadia Code", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNid.Location = new System.Drawing.Point(32, 223);
+            this.lblNid.Location = new System.Drawing.Point(18, 220);
             this.lblNid.Name = "lblNid";
-            this.lblNid.Size = new System.Drawing.Size(32, 18);
+            this.lblNid.Size = new System.Drawing.Size(40, 18);
             this.lblNid.TabIndex = 2;
-            this.lblNid.Text = "Nid";
+            this.lblNid.Text = "Nid:";
             // 
             // txtBoxNid
             // 
-            this.txtBoxNid.BackColor = System.Drawing.Color.DarkSalmon;
+            this.txtBoxNid.BackColor = System.Drawing.Color.Purple;
             this.txtBoxNid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBoxNid.Font = new System.Drawing.Font("Cascadia Code", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxNid.ForeColor = System.Drawing.Color.White;
@@ -241,10 +327,12 @@
             this.txtBoxNid.Name = "txtBoxNid";
             this.txtBoxNid.Size = new System.Drawing.Size(110, 20);
             this.txtBoxNid.TabIndex = 1;
+            this.txtBoxNid.TextChanged += new System.EventHandler(this.txtBoxNid_TextChanged);
+            this.txtBoxNid.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBoxNid_KeyPress);
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.picBox);
+            this.groupBox3.Controls.Add(this.picBoxImage);
             this.groupBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox3.Location = new System.Drawing.Point(63, 76);
             this.groupBox3.Name = "groupBox3";
@@ -252,12 +340,32 @@
             this.groupBox3.TabIndex = 0;
             this.groupBox3.TabStop = false;
             // 
+            // picBoxImage
+            // 
+            this.picBoxImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picBoxImage.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picBoxImage.Image = global::Estudiantes.Properties.Resources.image;
+            this.picBoxImage.Location = new System.Drawing.Point(63, 31);
+            this.picBoxImage.Name = "picBoxImage";
+            this.picBoxImage.Size = new System.Drawing.Size(48, 48);
+            this.picBoxImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picBoxImage.TabIndex = 0;
+            this.picBoxImage.TabStop = false;
+            this.picBoxImage.Click += new System.EventHandler(this.picBoxImage_Click);
+            // 
             // groupBox1
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.BackColor = System.Drawing.Color.LightCoral;
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.numPage);
+            this.groupBox1.Controls.Add(this.lblPage);
+            this.groupBox1.Controls.Add(this.btnLast);
+            this.groupBox1.Controls.Add(this.btnNext);
+            this.groupBox1.Controls.Add(this.btnPrev);
+            this.groupBox1.Controls.Add(this.btnFirst);
+            this.groupBox1.Controls.Add(this.dataTable);
             this.groupBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox1.ForeColor = System.Drawing.Color.White;
@@ -268,160 +376,242 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Lista de estudiantes";
             // 
+            // numPage
+            // 
+            this.numPage.BackColor = System.Drawing.Color.DarkMagenta;
+            this.numPage.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.numPage.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.numPage.Font = new System.Drawing.Font("Cascadia Code", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numPage.ForeColor = System.Drawing.Color.White;
+            this.numPage.Location = new System.Drawing.Point(6, 434);
+            this.numPage.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numPage.Name = "numPage";
+            this.numPage.Size = new System.Drawing.Size(62, 19);
+            this.numPage.TabIndex = 13;
+            this.numPage.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.numPage.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numPage.ValueChanged += new System.EventHandler(this.numPage_ValueChanged);
+            // 
+            // lblPage
+            // 
+            this.lblPage.AutoSize = true;
+            this.lblPage.Font = new System.Drawing.Font("Cascadia Code", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPage.Location = new System.Drawing.Point(165, 390);
+            this.lblPage.Name = "lblPage";
+            this.lblPage.Size = new System.Drawing.Size(56, 18);
+            this.lblPage.TabIndex = 12;
+            this.lblPage.Text = "Página";
+            // 
+            // btnLast
+            // 
+            this.btnLast.BackColor = System.Drawing.Color.Transparent;
+            this.btnLast.BackgroundImage = global::Estudiantes.Properties.Resources.forward_right;
+            this.btnLast.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnLast.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLast.FlatAppearance.BorderSize = 0;
+            this.btnLast.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnLast.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnLast.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLast.Font = new System.Drawing.Font("Cascadia Code", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLast.Location = new System.Drawing.Point(239, 425);
+            this.btnLast.Name = "btnLast";
+            this.btnLast.Size = new System.Drawing.Size(35, 35);
+            this.btnLast.TabIndex = 11;
+            this.btnLast.UseVisualStyleBackColor = false;
+            this.btnLast.Click += new System.EventHandler(this.btnLast_Click);
+            // 
+            // btnNext
+            // 
+            this.btnNext.BackColor = System.Drawing.Color.Transparent;
+            this.btnNext.BackgroundImage = global::Estudiantes.Properties.Resources.arrow_right_21093;
+            this.btnNext.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnNext.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNext.FlatAppearance.BorderSize = 0;
+            this.btnNext.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnNext.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNext.Font = new System.Drawing.Font("Cascadia Code", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNext.Location = new System.Drawing.Point(198, 425);
+            this.btnNext.Name = "btnNext";
+            this.btnNext.Size = new System.Drawing.Size(35, 35);
+            this.btnNext.TabIndex = 10;
+            this.btnNext.UseVisualStyleBackColor = false;
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
+            // 
+            // btnPrev
+            // 
+            this.btnPrev.BackColor = System.Drawing.Color.Transparent;
+            this.btnPrev.BackgroundImage = global::Estudiantes.Properties.Resources.arrow_left_21094;
+            this.btnPrev.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPrev.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPrev.FlatAppearance.BorderSize = 0;
+            this.btnPrev.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnPrev.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnPrev.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrev.Font = new System.Drawing.Font("Cascadia Code", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrev.Location = new System.Drawing.Point(157, 425);
+            this.btnPrev.Name = "btnPrev";
+            this.btnPrev.Size = new System.Drawing.Size(35, 35);
+            this.btnPrev.TabIndex = 9;
+            this.btnPrev.UseVisualStyleBackColor = false;
+            this.btnPrev.Click += new System.EventHandler(this.btnPrev_Click);
+            // 
+            // btnFirst
+            // 
+            this.btnFirst.BackColor = System.Drawing.Color.Transparent;
+            this.btnFirst.BackgroundImage = global::Estudiantes.Properties.Resources.forward_left;
+            this.btnFirst.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnFirst.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFirst.FlatAppearance.BorderSize = 0;
+            this.btnFirst.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnFirst.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnFirst.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFirst.Font = new System.Drawing.Font("Cascadia Code", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFirst.Location = new System.Drawing.Point(116, 425);
+            this.btnFirst.Name = "btnFirst";
+            this.btnFirst.Size = new System.Drawing.Size(35, 35);
+            this.btnFirst.TabIndex = 8;
+            this.btnFirst.UseVisualStyleBackColor = false;
+            this.btnFirst.Click += new System.EventHandler(this.btnFirst_Click);
+            // 
+            // dataTable
+            // 
+            this.dataTable.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataTable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataTable.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
+            this.dataTable.BackgroundColor = System.Drawing.Color.DarkMagenta;
+            this.dataTable.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataTable.GridColor = System.Drawing.Color.Chocolate;
+            this.dataTable.Location = new System.Drawing.Point(20, 68);
+            this.dataTable.Name = "dataTable";
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Cascadia Code", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataTable.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            this.dataTable.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataTable.Size = new System.Drawing.Size(354, 303);
+            this.dataTable.TabIndex = 0;
+            this.dataTable.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataTable_CellClick);
+            this.dataTable.KeyUp += new System.Windows.Forms.KeyEventHandler(this.dataTable_KeyUp);
+            // 
             // groupBox2
             // 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.AutoSize = true;
+            this.groupBox2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
             this.groupBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.panel1);
             this.groupBox2.Controls.Add(this.txtBuscar);
             this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.groupBox2.Location = new System.Drawing.Point(0, 80);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(736, 63);
+            this.groupBox2.Size = new System.Drawing.Size(728, 63);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
+            this.groupBox2.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox2_Paint);
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Cascadia Code", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(3, 17);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(156, 29);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Estudiantes";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(93, 41);
+            this.panel1.Location = new System.Drawing.Point(407, 41);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(315, 2);
             this.panel1.TabIndex = 2;
             // 
             // txtBuscar
             // 
-            this.txtBuscar.BackColor = System.Drawing.Color.IndianRed;
+            this.txtBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(2)))), ((int)(((byte)(2)))));
             this.txtBuscar.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBuscar.Font = new System.Drawing.Font("Cascadia Code", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBuscar.ForeColor = System.Drawing.Color.White;
-            this.txtBuscar.Location = new System.Drawing.Point(93, 17);
+            this.txtBuscar.Location = new System.Drawing.Point(407, 17);
             this.txtBuscar.Multiline = true;
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(314, 23);
             this.txtBuscar.TabIndex = 8;
+            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label2.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 17);
+            this.label2.Location = new System.Drawing.Point(326, 17);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(64, 21);
             this.label2.TabIndex = 0;
             this.label2.Text = "Buscar";
             // 
-            // btnDelete
-            // 
-            this.btnDelete.BackColor = System.Drawing.Color.Transparent;
-            this.btnDelete.BackgroundImage = global::Estudiantes.Properties.Resources.trash;
-            this.btnDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDelete.FlatAppearance.BorderSize = 0;
-            this.btnDelete.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnDelete.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelete.Font = new System.Drawing.Font("Cascadia Code", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Location = new System.Drawing.Point(173, 425);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(35, 35);
-            this.btnDelete.TabIndex = 5;
-            this.btnDelete.UseVisualStyleBackColor = false;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.BackColor = System.Drawing.Color.Transparent;
-            this.btnCancel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCancel.BackgroundImage")));
-            this.btnCancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCancel.FlatAppearance.BorderSize = 0;
-            this.btnCancel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnCancel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.Font = new System.Drawing.Font("Cascadia Code", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(218, 425);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(35, 35);
-            this.btnCancel.TabIndex = 6;
-            this.btnCancel.UseVisualStyleBackColor = false;
-            // 
-            // btnEnviar
-            // 
-            this.btnEnviar.BackColor = System.Drawing.Color.Transparent;
-            this.btnEnviar.BackgroundImage = global::Estudiantes.Properties.Resources.save;
-            this.btnEnviar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnEnviar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEnviar.FlatAppearance.BorderSize = 0;
-            this.btnEnviar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnEnviar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnEnviar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEnviar.Font = new System.Drawing.Font("Cascadia Code", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEnviar.Location = new System.Drawing.Point(259, 425);
-            this.btnEnviar.Name = "btnEnviar";
-            this.btnEnviar.Size = new System.Drawing.Size(35, 35);
-            this.btnEnviar.TabIndex = 7;
-            this.btnEnviar.UseVisualStyleBackColor = false;
-            // 
-            // picBox
-            // 
-            this.picBox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picBox.Image = global::Estudiantes.Properties.Resources.image;
-            this.picBox.Location = new System.Drawing.Point(63, 31);
-            this.picBox.Name = "picBox";
-            this.picBox.Size = new System.Drawing.Size(48, 48);
-            this.picBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.picBox.TabIndex = 0;
-            this.picBox.TabStop = false;
-            this.picBox.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Estudiantes.Properties.Resources.user;
-            this.pictureBox1.Location = new System.Drawing.Point(38, 22);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.IndianRed;
+            this.BackColor = System.Drawing.Color.Black;
+            this.BackgroundImage = global::Estudiantes.Properties.Resources.back2;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(736, 704);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.bgMenu2);
-            this.Controls.Add(this.gbMenu);
+            this.Controls.Add(gbMenu);
+            this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Cascadia Code", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.White;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Systema de estudiante";
-            this.gbMenu.ResumeLayout(false);
-            this.gbMenu.PerformLayout();
+            gbMenu.ResumeLayout(false);
+            gbMenu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.bgMenu2.ResumeLayout(false);
             this.bgMenu2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxImage)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numPage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataTable)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.GroupBox gbMenu;
         private System.Windows.Forms.GroupBox bgMenu2;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
@@ -445,8 +635,16 @@
         private System.Windows.Forms.Button btnEnviar;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.PictureBox picBox;
+        private System.Windows.Forms.PictureBox picBoxImage;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DataGridView dataTable;
+        private System.Windows.Forms.Button btnFirst;
+        private System.Windows.Forms.Button btnLast;
+        private System.Windows.Forms.Button btnNext;
+        private System.Windows.Forms.Button btnPrev;
+        private System.Windows.Forms.Label lblPage;
+        private System.Windows.Forms.NumericUpDown numPage;
     }
 }
 

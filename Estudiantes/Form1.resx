@@ -117,11 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="gbMenu.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btnCancel.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAABCXAAAQlwGv/hM8AAAC40lE
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAABCUAAAQlAECRzJRAAAC40lE
         QVRYR7WXu25TQRCGrcBLACVSZMcICQTi0iBR0CEFB16CABK8QxCXDih4gYgK3oA7RPQQRAUtUNiOkxIB
         /7dn57A+mXMj9kifIp+dnX+yl9ndTp2NB13YJ5bELfFUbIod8SeyHb89E/j0BX1ilP8wOscgZ8Rj8U38
         EiZaBj740ue0aJfIcLBo4gfFPfFTeEJN+CGIcUAo5mJUKbHRSrezdSmInxSvxW/hBW4DMV6K40Kxe1Gt
