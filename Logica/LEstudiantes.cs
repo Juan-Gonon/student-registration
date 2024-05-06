@@ -259,7 +259,7 @@ namespace Logica
 
         }
 
-        private void Restablecer()
+        public void Restablecer()
         {
             _action = "insert";
             _num_pagina = 1;
@@ -288,6 +288,25 @@ namespace Logica
                 _paginador = new Paginator<Estudiante>(listEstudiante, listLabel[4], _reg_por_pagina);
             }
             SearchEstudiante("");
+        }
+
+        public void Eliminar()
+        {
+            if (_idEstudiante.Equals(0))
+            {
+                MessageBox.Show("Seleccione un estudiante");
+            }
+            else
+            {
+                if(MessageBox.Show("Estas seguro de eliminar el estudiante? ", "Eliminar estudiante",
+                    MessageBoxButtons.YesNo)== DialogResult.Yes)
+                {
+                    _Estudiante.Where(c => c.id.Equals(_idEstudiante)).Delete();
+                    Restablecer();
+
+                }
+            }
+
         }
 
     }

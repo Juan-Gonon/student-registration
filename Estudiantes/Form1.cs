@@ -52,7 +52,7 @@ namespace Estudiantes
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            
+            estudiante.Eliminar();
         }
 
      
@@ -113,7 +113,7 @@ namespace Estudiantes
             }
         }
         
-  
+
 
         private void txtBoxApellido_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -201,6 +201,11 @@ namespace Estudiantes
                 estudiante.getEstudiante();
             }
 
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            estudiante.Restablecer();
         }
     }
 }
