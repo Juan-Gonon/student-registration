@@ -39,7 +39,7 @@ namespace Logica
             Restablecer();
         }
 
-        
+
         public void Registrar()
         {
             int Contador = 0;
@@ -49,9 +49,9 @@ namespace Logica
             //var email = ;
 
 
-            this.listTextBox.ForEach(textBox=>
+            this.listTextBox.ForEach(textBox =>
             {
-                if(textBox.Text == "")
+                if (textBox.Text == "")
                 {
                     this.listLabel[Contador].Text = $"{this.listLabel[Contador].Text}requerido";
                     this.listLabel[Contador].ForeColor = Color.Red;
@@ -77,9 +77,16 @@ namespace Logica
                         }
                         else
                         {
-                            listLabel[Contador].Text = "Email ya esta registrado";
-                            this.listLabel[Contador].ForeColor = Color.Red;
-                            this.listTextBox[Contador].Focus();
+                            if (user[0].id.Equals(_idEstudiante))
+                            {
+                                Save();
+                            }
+                            else
+                            {
+                                listLabel[Contador].Text = "Email ya esta registrado";
+                                this.listLabel[Contador].ForeColor = Color.Red;
+                                this.listTextBox[Contador].Focus();
+                            }
                         }
                     }
                 }
@@ -94,22 +101,42 @@ namespace Logica
         private void Save()
         {
 
-            var imageArray = uploadingimage.ImageToByte(this.image.Image);
-
             BeginTransactionAsync();
 
             try
             {
-                _Estudiante.Value(e => e.nid, listTextBox[0].Text)
-                .Value(e => e.nombre, listTextBox[1].Text)
-                .Value(e => e.apellido, listTextBox[2].Text)
-                .Value(e => e.email, listTextBox[3].Text)
-                 .Value(e => e.image, imageArray)
-                .Insert()
-                ;
+                var imageArray = uploadingimage.ImageToByte(this.image.Image);
+
+                switch (_action)
+                {
+                    case "insert":
+                        _Estudiante.Value(e => e.nid, listTextBox[0].Text)
+                        .Value(e => e.nombre, listTextBox[1].Text)
+                        .Value(e => e.apellido, listTextBox[2].Text)
+                        .Value(e => e.email, listTextBox[3].Text)
+                        .Value(e => e.image, imageArray)
+                        .Insert()
+                        ;
+                        break;
+                    case "update":
+                        _Estudiante.Where(e => e.id.Equals(_idEstudiante))
+                        .Set(e => e.nid, listTextBox[0].Text)
+                        .Set(e => e.nombre, listTextBox[1].Text)
+                        .Set(e => e.apellido, listTextBox[2].Text)
+                        .Set(e => e.email, listTextBox[3].Text)
+                        .Set(e => e.image, imageArray)
+                        .Update()
+                        ;
+                        break;
+
+                    default:
+                        break;
+                }
+
+
 
                 CommitTransaction();
-                //Restablecer();
+                Restablecer();
 
             }
             catch (Exception e)
@@ -124,7 +151,7 @@ namespace Logica
 
         public void SearchEstudiante(string campo)
         {
-            List<Estudiante> query = new List<Estudiante> ();
+            List<Estudiante> query = new List<Estudiante>();
 
             int inicio = (_num_pagina - 1) * _reg_por_pagina;
 
@@ -140,7 +167,7 @@ namespace Logica
                 ).ToList();
             }
 
-            if(query.Count > 0)
+            if (query.Count > 0)
             {
                 this._dataGrid.DataSource = query.Select(c => new
                 {
@@ -206,14 +233,14 @@ namespace Logica
             {
                 byte[] arrayImage = (byte[])_dataGrid.CurrentRow.Cells[5].Value;
                 image.Image = uploadingimage.byteArrayToImagen(arrayImage);
-                   
+
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 image.Image = _imgBitmap;
             }
 
-        
+
         }
 
         public void Registro_Paginas()
@@ -234,7 +261,9 @@ namespace Logica
 
         private void Restablecer()
         {
-
+            _action = "insert";
+            _num_pagina = 1;
+            _idEstudiante = 0;
             image.Image = this._imgBitmap;
             listLabel[0].Text = "Nid: ";
             listLabel[1].Text = "Nombre: ";
